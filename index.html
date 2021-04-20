@@ -3,11 +3,50 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello, world</title>
+    <title>Recipe App</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Hello, world!</h1>
+    <div class="mobile-container">
+        <header>
+            <input type="text">
+            <button id="search"><i class="fas fa-search"></i></button>
+        </header>
+
+        <div class="fav-container">
+            <h3>Favorite Meals</h3>
+            <ul>
+                <li><img src="https://www.themealdb.com/images/ingredients/Lime.png" alt="">
+                    <span>Lime</span>
+                </li>
+                <li>
+                    <img src="https://www.themealdb.com/images/ingredients/Lemon.png" alt="">
+                    <span>Carbonara</span>
+                </li>
+                <li>
+                    <img src="https://www.themealdb.com/images/ingredients/Apple.png" alt=""
+                    ><span>Pasta</span>
+                </li>
+            </ul>
+        </div>
+
+        <span class="random">
+            Random Recipe
+        </span>
+
+        <div class="meals">
+            <div class="meal">
+                <div class="meal-header">
+                    <img src="https://www.themealdb.com/images/ingredients/Orange.png" alt="">
+                </div>
+                <div class="meal-body">
+                    <h4>Veggie Veggies</h4>
+                    <button><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
