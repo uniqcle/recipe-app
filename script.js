@@ -38,15 +38,40 @@ function addMeal(mealData, random = false){
     `; 
 
     const btn =  meal.querySelector('.meal-body .fav-btn'); 
-    
+
     btn.addEventListener("click", ()=>{
-        btn.classList.toggle('active'); 
 
-    })
+        if( btn.classList.contains("active")) {
+
+            removeMealFromLS(mealData.idMeal); 
+            btn.classList.remove("active"); 
+       
+        } else {
+            addMealToLS(mealData.idMeal); 
+            btn.classList.add("active"); 
+        }
+
+    }) 
     
-    
-
-    meals.appendChild(meal); 
-
-        
+    meals.appendChild(meal);        
 }
+
+//Local Storage
+function getMealsFromLS(){
+    const mealIds = JSON.parse( localStorage.getItem("mealIds") )
+    return mealIds === null ? [] : mealIds; 
+}
+
+function addMealToLS(mealId){
+     const mealIds = getMealsFromLS(); 
+     localStorage.setItem("mealIds", JSON.stringify([...mealIds, mealId])); 
+}
+
+function removeMealFromLS(mealId){
+    const mealIds = getMealsFromLS(); 
+    localStorage.setItem(
+        "mealIds",
+        JSON.stringify( mealIds.filter((id)=> id !== mealId )) 
+        ); 
+}
+
