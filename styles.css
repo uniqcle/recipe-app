@@ -68,6 +68,32 @@ header button{
 .fav-meals li{
     width: 85px; 
     padding: 5px; 
+    position: relative; 
+    cursor: pointer; 
+}
+
+.fav-meals li span{
+    width: 75px; 
+        white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block; 
+}
+
+.fav-meals li:hover .close{
+    transition:  opacity 2s ease 0s; 
+    opacity: 0.7; 
+    cursor: pointer; 
+}
+
+.fav-meals li .close{
+    background: transparent; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    border: none; 
+    font-size: 1rem;
+    opacity: 0; 
 }
 
 .fav-meals li img{
