@@ -176,11 +176,13 @@ header button{
 
 .popup{
     background-color: #fff; 
-    max-width: 500px; 
+    max-width: 800px; 
+    max-height: 100vh; 
     width: 100%; 
     padding: 0 2rem; 
     border-radius: 5px; 
     position: relative; 
+    overflow: auto; 
 }
 
 .popup h1{
